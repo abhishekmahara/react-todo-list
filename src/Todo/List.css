@@ -1,0 +1,149 @@
+/* Base Section Styling - Dark Mode */
+section {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  padding: 2rem;
+  height: 100%;
+  /* min-height: 100vh; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #58a6ff;
+  font-size: 2.8rem;
+  margin: 0;
+  text-shadow: 0 0 3px #007acc;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Input Field */
+.todo-input {
+  padding: 0.8rem 1.2rem;
+  width: 260px;
+  border: 1.5px solid #30363d;
+  border-radius: 12px;
+  background-color: #161b22;
+  color: #e6edf3;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+  box-shadow: inset 0 0 0 transparent;
+}
+
+.todo-input:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 2px #007acc;
+  outline: none;
+}
+
+.todo-input::placeholder {
+  color: #8b949e;
+}
+
+/* Button Styling */
+.todo-btn {
+  padding: 1.1rem 1.3rem;
+  background: linear-gradient(to right, #007acc, #005f99);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-btn:hover {
+  background: linear-gradient(to right, #005f99, #004477);
+  transform: scale(1.05);
+}
+
+/* Task List Styling */
+.unOrderedList {
+  margin-top: 1rem;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.unOrderedList ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.unOrderedList li {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e6edf3;
+  transition: transform 0.2s;
+}
+
+
+.unOrderedList li:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 3px rgba(88, 166, 255, 0.1);
+}
+
+.unOrderedList li span {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  padding-right: 1rem;
+  word-break: break-word;
+}
+
+/* Icon Buttons */
+.Check-button,
+.del-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #8b949e; /* faded color for completed task */
+}
+
+
+.Check-button {
+  color: #2ea043; /* green */
+}
+
+.Check-button:hover {
+  background-color: rgba(46, 160, 67, 0.2);
+}
+
+.del-button {
+  color: #f85149; /* red */
+}
+
+.del-button:hover {
+  background-color: rgba(248, 81, 73, 0.2);
+}
