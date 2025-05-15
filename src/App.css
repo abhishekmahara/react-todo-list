@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+body{
+     background-image: url("vite-project/src/assets/IMG_8144.JPG");
+}

@@ -1,10 +1,15 @@
-/* Base Section Styling - Dark Mode */
+body{
+   background-image: url("../assets/IMG_8144.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
 section {
-  background-color: #0d1117;
+  /* background-color: #0d1117; */  
   color: #c9d1d9;
   padding: 2rem;
   height: 100%;
-  /* min-height: 100vh; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -88,7 +93,8 @@ form {
 }
 
 .unOrderedList li {
-  background-color: #161b22;
+  /* background-color: #161b22; */
+  background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
   border: 1px solid #30363d;
   border-radius: 12px;
   padding: 1rem;
@@ -114,7 +120,7 @@ form {
 }
 
 /* Icon Buttons */
-.Check-button,
+.Check-button,.Edit-button,
 .del-button {
   background: none;
   border: none;
@@ -128,12 +134,23 @@ form {
 
 .completed {
   text-decoration: line-through;
-  color: #8b949e; /* faded color for completed task */
+  color: #8b949e; 
 }
 
+.Edit-button{
+  color:white;
+}
+
+.Edit-button:hover{
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 0.3) 0%,
+    rgba(155, 0, 250, 0.3) 30%
+  );  
+}
 
 .Check-button {
-  color: #2ea043; /* green */
+  color: #2ea043;
 }
 
 .Check-button:hover {
@@ -141,9 +158,9 @@ form {
 }
 
 .del-button {
-  color: #f85149; /* red */
+  color: white; 
 }
 
 .del-button:hover {
-  background-color: rgba(248, 81, 73, 0.2);
+  background-color: rgba(248, 81, 73, 0.6);
 }
