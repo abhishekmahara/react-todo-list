@@ -89,6 +89,8 @@ form {
   max-width: 600px;
 }
 
+
+
 .unOrderedList li {
   /* background-color: #161b22; */
   background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
@@ -164,9 +166,9 @@ form {
 
 .clear-btn {
   display: block;
-  margin: 2rem auto;
-  padding: 0.9rem 2rem;
-  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 0.9rem 1.8rem;
+  font-size: .9rem;
   font-weight: bold;
   color: #ffffff;
   background: linear-gradient(to right, #ff416c, #ff4b2b);
@@ -176,3 +178,6 @@ form {
   }
 
 
+.hidden {
+  display: none;
+}
