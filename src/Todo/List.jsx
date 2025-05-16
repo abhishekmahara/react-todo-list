@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './List.css';
 import { IoMdAdd } from "react-icons/io";
 import { MdDelete, MdEdit } from "react-icons/md";
@@ -7,7 +7,8 @@ import { FaCheck } from "react-icons/fa";
 export const List = () => {
   const [inVal, setInVal] = useState("");
   const [task, setTask] = useState([]);
-  const [editId, setEditId] = useState(null); // 👈 Track task being edited
+  const [editId, setEditId] = useState(null);
+  const [dateTime,setDatetime]=useState("");
 
   const handleInputChange = (value) => {
     setInVal(value);
@@ -19,14 +20,13 @@ export const List = () => {
     if (!inVal.trim()) return;
 
     if (editId) {
-      // Update existing task
       const updatedTasks = task.map((item) =>
         item.id === editId ? { ...item, text: inVal } : item
       );
       setTask(updatedTasks);
-      setEditId(null); // Exit edit mode
+      setEditId(null); 
     } else {
-      // Prevent duplicate task
+      
       if (task.some((t) => t.text === inVal)) {
         setInVal("");
         return;
@@ -40,7 +40,7 @@ export const List = () => {
       setTask((prev) => [...prev, newTask]);
     }
 
-    setInVal(""); // Reset input
+    setInVal(""); 
   };
 
   const taskComplete = (idToCheck) => {
@@ -65,10 +65,31 @@ export const List = () => {
     setEditId(idToEdit);
   };
 
+  //clear button
+  const handleClearData= () => {
+    setTask([]);
+  }
+
+
+  // Date and Time
+  
+  useEffect(()=>{
+  const interval = setInterval(()=>{
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString();
+  const formattedTime = now.toLocaleTimeString();
+  setDatetime(`${formattedDate}-${formattedTime}`)
+  },1000)
+
+  return() => clearInterval(interval)
+  },[])
+
+
   return (
     <section>
-      <header>
+      <header> 
         <h1>TODO LIST</h1>
+        <h2 className='date'>{dateTime}</h2>
       </header>
 
       <section>
@@ -110,6 +131,9 @@ export const List = () => {
             </li>
           ))}
         </ul>
+      </section>
+      <section>
+        <button className='clear-btn' onClick={handleClearData}>Clear All</button>
       </section>
     </section>
   );

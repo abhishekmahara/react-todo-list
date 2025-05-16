@@ -1,12 +1,11 @@
 body{
-   background-image: url("../assets/IMG_8144.JPG");
+  background-image: url("../assets/IMG_8144.JPG");
   background-size: cover;
   background-repeat: no-repeat;
 
 }
 
 section {
-  /* background-color: #0d1117; */  
   color: #c9d1d9;
   padding: 2rem;
   height: 100%;
@@ -79,9 +78,7 @@ form {
 
 /* Task List Styling */
 .unOrderedList {
-  margin-top: 1rem;
   display: flex;
-  min-height: 100vh;
   justify-content: center;
 }
 
@@ -164,3 +161,18 @@ form {
 .del-button:hover {
   background-color: rgba(248, 81, 73, 0.6);
 }
+
+.clear-btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  }
+
+
